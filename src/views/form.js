@@ -17,5 +17,8 @@ module.exports = function form(draft) {
       <textarea name=body>${draft.body}</textarea>
       <button>Save draft</button>
     </form>
+    <form method=post action=/api/drafts/${draft.key}/publish>
+      <button>Publish draft</button>
+    </form>
   `
 }
