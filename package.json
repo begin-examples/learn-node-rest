@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "description": "A Begin app with the minimum necessary file structure",
   "scripts": {
-    "build": "eleventy",
-    "watch": "eleventy --serve",
-    "start": "ARC_STATIC_SPA=false npx sandbox"
+    "test": "QUIET=1 tape test/*-test.js | tap-spec",
+    "start": "sandbox"
   },
-  "devDependencies": {
-    "@architect/sandbox": "^1.5.8",
-    "@11ty/eleventy": "^0.10.0"
+  "dependencies": {
+    "@architect/sandbox": "latest",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.13.0",
+    "tiny-json-http": "^7.1.2"
   }
 }

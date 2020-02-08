@@ -5,13 +5,13 @@ async function login(req) {
   if (req.query.code) {
     let account = await github(req)
     return {
-      session: {account},
-      location: '/admin'
+      session: { account },
+      location: '/'
     }
   }
   else {
     return {
-      location: '/admin/?authorized=false'
+      location: '/?authorized=false'
     }
   }
 }
