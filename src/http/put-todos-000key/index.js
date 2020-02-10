@@ -1,5 +1,6 @@
 let arc = require('@architect/functions')
 let auth = require('@architect/shared/auth')
+let read = require('@architect/shared/read')
 let data = require('@begin/data')
 
 async function write(req) {
@@ -10,15 +11,4 @@ async function write(req) {
   await data.set(copy)
 }
 
-async function render(req) {
-  let todos = await data.get({
-    table: `todos-${req.session.account.id}`
-  })
-  let account = req.session.account
-  delete account.token
-  return {
-    json: {account, todos}
-  }
-}
-
-exports.handler = arc.http.async(auth, write, render)
+exports.handler = arc.http.async(auth, write, read)

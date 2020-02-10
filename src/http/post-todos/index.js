@@ -1,21 +1,13 @@
 let arc = require('@architect/functions')
 let auth = require('@architect/shared/auth')
+let read = require('@architect/shared/read')
 let data = require('@begin/data')
 
 async function create(req) {
-
-  // write the record
-  let table = `todos-${req.session.account.id}`
-  await data.set({table, ...req.body})
-
-  // render a response
-  let todos = await data.get({table})
-  let account = req.session.account
-  delete account.token
-
-  return {
-    json: {account, todos}
-  }
+  await data.set({
+    table: `todos-${req.session.account.id}`, 
+    ...req.body
+  })
 }
 
-exports.handler = arc.http.async(auth, create)
+exports.handler = arc.http.async(auth, create, read)

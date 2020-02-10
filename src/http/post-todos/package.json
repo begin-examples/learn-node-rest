@@ -2,6 +2,6 @@
   "name": "post-todos",
   "dependencies": {
     "@architect/functions": "^3.5.1",
-    "@begin/data": "^1.1.7"
+    "@begin/data": "^1.1.8-RC.1"
   }
 }
