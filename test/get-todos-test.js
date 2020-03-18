@@ -14,6 +14,7 @@ test('get /lists not authenticated', async t=> {
   try {
     let url = 'http://localhost:3333/todos'
     let result = await tiny.get({url})
+    console.log(result)
   }
   catch(e) {
     t.ok(e.statusCode === 403, 'not auth')
