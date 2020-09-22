@@ -1,11 +1,10 @@
 let tiny = require('tiny-json-http')
 let test = require('tape')
 let sandbox = require('@architect/sandbox')
-let end
 
 test('start', async t=> {
   t.plan(1)
-  end = await sandbox.start()
+  await sandbox.start()
   t.ok(true, 'started')
 })
 
@@ -24,6 +23,6 @@ test('get /lists not authenticated', async t=> {
 
 test('end', async t=> {
   t.plan(1)
-  await end()
+  await sandbox.end()
   t.ok(true, 'ended')
 })
