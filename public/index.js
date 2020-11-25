@@ -5,12 +5,13 @@ async function render(payload) {
 
   if (payload.error === 'not_authorized') {
     let main = document.getElementsByTagName('main')[0]
-    main.innerHTML = `<a href=${payload.href}>${payload.message}</a>`
+    main.innerHTML = `<h1>Kewl ToDos</h1> <a href=${payload.href}>${payload.message}</a>`
     return;
   }
-  
+
   let html = `
-    <a href=/logout>logout</a>
+    <a href=/logout>logout</a> <br>
+    <h2>Kewl ToDo List</h2>
     <input type=text id=new-todo placeholder="todo text here">
   `
 
@@ -72,7 +73,7 @@ try {
     let res = await read()
     await render(res)
   })()
-} 
+}
 catch(err) {
   console.log('err', err)
 }

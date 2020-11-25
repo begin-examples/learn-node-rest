@@ -5,10 +5,10 @@ module.exports = async function auth(req) {
     let base = `https://github.com/login/oauth/authorize`
     let href = `${base}?client_id=${client_id}&redirect_uri=${redirect_uri}`
     return {
-      statusCode: 403, 
-      json: { 
+      statusCode: 403,
+      json: {
         error: 'not_authorized',
-        message: 'please sign in',
+        message: 'Please sign in',
         href
       }
     }
