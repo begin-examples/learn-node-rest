@@ -5,33 +5,3 @@ updates:
   schedule:
     interval: daily
   open-pull-requests-limit: 99
-- package-ecosystem: npm
-  directory: "/src/http/delete-todos-000key/"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 99
-- package-ecosystem: npm
-  directory: "/src/http/get-login/"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 99
-- package-ecosystem: npm
-  directory: "/src/http/get-logout/"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 99
-- package-ecosystem: npm
-  directory: "/src/http/get-todos/"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 99
-- package-ecosystem: npm
-  directory: "/src/http/post-todos/"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 99
-- package-ecosystem: npm
-  directory: "/src/http/post-todos-000key/"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 99
