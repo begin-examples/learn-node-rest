@@ -1,7 +1,0 @@
-{
-  "name": "post-todos",
-  "dependencies": {
-    "@architect/functions": "latest",
-    "@begin/data": "latest"
-  }
-}

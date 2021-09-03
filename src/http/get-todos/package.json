@@ -1,7 +1,0 @@
-{
-  "name": "get-todos",
-  "dependencies": {
-    "@architect/functions": "latest",
-    "@begin/data": "latest"
-  }
-}

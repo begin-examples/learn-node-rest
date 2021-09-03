@@ -1,7 +1,0 @@
-{
-  "name": "put-todos",
-  "dependencies": {
-    "@architect/functions": "latest",
-    "@begin/data": "latest"
-  }
-}
