@@ -131,7 +131,7 @@ jobs:
 
         #fails if no custom tests present
       - name: Run Basic Tests
-        if: ${{env.TEST_CONFIG_RUN ==  "basic"}}
+        if: ${{env.TEST_CONFIG_RUN == '"basic"'}}
         run: QUIET=1 npx tape .github/workflows/integration-tests/generated/**sandbox-test.js | npx tap-spec
 
       - name: Notify
