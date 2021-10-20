@@ -78,7 +78,7 @@ jobs:
       HAS_CUSTOM_TESTS: true
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [12.x, 14.x]
         os: [windows-latest, ubuntu-latest, macOS-latest]
     steps:
       - name: Check out repo
@@ -129,8 +129,8 @@ jobs:
         if: ${{env.HAS_CUSTOM_TESTS == true}}
         run: QUIET=1 npx tape .github/workflows/integration-tests/custom/**sandbox-test.js | npx tap-spec
 
-        #fails if no custom tests present
       - name: Run Basic Tests
+        #TODO: double quotes should be fixed in the check for this variable.
         if: ${{env.TEST_CONFIG_RUN == '"basic"'}}
         run: QUIET=1 npx tape .github/workflows/integration-tests/generated/**sandbox-test.js | npx tap-spec
 
